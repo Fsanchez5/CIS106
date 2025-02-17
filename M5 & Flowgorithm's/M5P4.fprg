@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-16 11:50:04 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUtHVk1VUUw7MjAyNS0wMi0xNjsxMTo0MToyNSBQTTszNDAy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUtHVk1VUUw7MjAyNS0wMi0xNjsxMTo1MDowNCBQTTsxOzM1MDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="applianceName" type="String" array="False" size=""/>
+            <declare name="applianceCost" type="Real" array="False" size=""/>
+            <declare name="warrantyCost" type="Real" array="False" size=""/>
+            <declare name="totalCost" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the name of the appliance:&quot;" newline="True"/>
+            <input variable="applianceName"/>
+            <output expression="&quot;Enter the cost of the appliance:&quot;" newline="True"/>
+            <input variable="applianceCost"/>
+            <if expression="applianceCost &gt; 1000">
+                <then>
+                    <assign variable="warrantyCost" expression="applianceCost * 0.10"/>
+                </then>
+                <else>
+                    <assign variable="warrantyCost" expression="applianceCost * 0.05"/>
+                </else>
+            </if>
+            <assign variable="totalCost" expression="applianceCost + warrantyCost"/>
+            <output expression="applianceName" newline="True"/>
+            <output expression="applianceCost" newline="True"/>
+            <output expression="warrantyCost" newline="True"/>
+            <output expression="totalCost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
