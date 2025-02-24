@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-24 12:41:05 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVNRUjdIVjI7MjAyNS0wMi0yNDsxMjoyNToyNyBBTTszMzQ5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVNRUjdIVjI7MjAyNS0wMi0yNDsxMjo0MTowNSBBTTsxOzM0NTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the employees last name:&quot;" newline="True"/>
+            <input variable="lastName"/>
+            <declare name="salary" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the employees salary:&quot;" newline="True"/>
+            <input variable="salary"/>
+            <declare name="jobLevel" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the employees job level:&quot;" newline="True"/>
+            <input variable="jobLevel"/>
+            <declare name="bonusRate" type="Real" array="False" size=""/>
+            <declare name="bonus" type="Real" array="False" size=""/>
+            <if expression="jobLevel &gt;= 10">
+                <then>
+                    <assign variable="bonusRate" expression="0.25"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="jobLevel &gt;=5 and jobLevel &lt;=9">
+                <then>
+                    <assign variable="bonusRate" expression="0.20"/>
+                </then>
+                <else>
+                    <assign variable="bonusRate" expression="0.10"/>
+                </else>
+            </if>
+            <assign variable="bonus" expression="salary * bonusRate"/>
+            <output expression="&quot;lastName&quot;" newline="True"/>
+            <output expression="&quot;bonus&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

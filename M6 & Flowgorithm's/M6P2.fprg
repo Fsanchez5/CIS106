@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-23 11:55:37 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVNRUjdIVjI7MjAyNS0wMi0yMzsxMTozNjo1NiBQTTszMzY2"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVNRUjdIVjI7MjAyNS0wMi0yMzsxMTo1NTozNyBQTTsxOzM0NzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="partNumber" type="String" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="unitCost" type="Real" array="False" size=""/>
+            <declare name="totalCost" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter part Number:&quot;" newline="True"/>
+            <input variable="partNumber"/>
+            <output expression="&quot;Enter quantity:&quot;" newline="True"/>
+            <input variable="quantity"/>
+            <if expression="partNumber == &quot;10&quot; or partNumber == &quot;55&quot;">
+                <then>
+                    <assign variable="unitCost" expression="1.00"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="partNumber == &quot;99&quot;">
+                <then>
+                    <assign variable="unitCost" expression="2.00"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="partNumber == &quot;80&quot; or partNumber == &quot;70&quot;">
+                <then>
+                    <assign variable="unitCost" expression="3.00"/>
+                </then>
+                <else>
+                    <assign variable="unitCost" expression="5.00"/>
+                </else>
+            </if>
+            <assign variable="totalCost" expression="quantity * unitCost"/>
+            <output expression="&quot;Part Number: &quot; +  partNumber" newline="True"/>
+            <output expression="&quot;Cost Per Unit: &quot; + ToString(unitCost)" newline="True"/>
+            <output expression="&quot;Total Cost: &quot; + ToString(totalCost)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

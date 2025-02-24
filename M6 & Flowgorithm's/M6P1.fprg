@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-23 11:15:01 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVNRUjdIVjI7MjAyNS0wMi0yMzsxMDo0NzoyOCBQTTszMzY2"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVNRUjdIVjI7MjAyNS0wMi0yMzsxMToxNTowMSBQTTsxOzM0NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="extendedPrice" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the quantity of widgets: &quot;" newline="True"/>
+            <input variable="quantity"/>
+            <if expression="quantity &gt; 10000">
+                <then>
+                    <assign variable="price" expression="10"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="quantity &gt;= 5000">
+                <then>
+                    <assign variable="price" expression="20"/>
+                </then>
+                <else>
+                    <assign variable="price" expression="30"/>
+                </else>
+            </if>
+            <assign variable="extendedPrice" expression="quantity * price"/>
+            <assign variable="tax" expression="extendedPrice * 0.07"/>
+            <assign variable="total" expression="extendedPrice + tax"/>
+            <output expression="&quot;Extended Price: &quot; + extendedPrice" newline="True"/>
+            <output expression="&quot;Tax Amount&quot; + tax" newline="True"/>
+            <output expression="&quot;Total Price&quot; + total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
