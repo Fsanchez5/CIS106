@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-03 12:02:44 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCSlBSUko7MjAyNS0wMy0wMzsxMTo0Njo1OCBBTTszMzc1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCSlBSUko7MjAyNS0wMy0wMzsxMjowMjo0NCBQTTsxOzM0ODY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Cprogram" type="String" array="False" size=""/>
+            <output expression="&quot;Do you want to enter an order? (Yes/No)&quot;" newline="True"/>
+            <assign variable="totalDiscount" expression="0"/>
+            <while expression="Cprogram == &quot;Yes&quot;">
+                <output expression="&quot;Enter the quantity of the item&quot;" newline="True"/>
+                <input variable="quantity"/>
+                <output expression="&quot;Enter the price of the item&quot;" newline="True"/>
+                <input variable="price"/>
+                <assign variable="extendedPrice" expression="quantity * price"/>
+                <if expression="extendedPrice &gt; 10000">
+                    <then>
+                        <assign variable="discountRate" expression="0.25"/>
+                    </then>
+                    <else>
+                        <assign variable="discountRate" expression="0.10"/>
+                    </else>
+                </if>
+                <assign variable="discountAmount" expression="extendedPrice * discountRate"/>
+                <assign variable="totalPrice" expression="extendedPrice - discountAmount"/>
+            </while>
+            <output expression="extendedPrice" newline="True"/>
+            <output expression="discountAmount" newline="True"/>
+            <output expression="totalPrice" newline="True"/>
+            <assign variable="totalDiscount" expression="totalDiscount + discountAmount"/>
+            <output expression="&quot;Do you want to enter another order? (Yes/No)&quot;" newline="True"/>
+            <declare name="Cprogram" type="String" array="False" size=""/>
+            <output expression="totalDiscount" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-03 11:44:44 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCSlBSUko7MjAyNS0wMy0wMzsxMToyNjowMiBBTTszMzYy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCSlBSUko7MjAyNS0wMy0wMzsxMTo0NDo0NCBBTTsxOzM0NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Do you want to enter employee data? (Yes/No)&quot;" newline="True"/>
+            <declare name="continue_program" type="String" array="False" size=""/>
+            <assign variable="continue_program" expression="&quot;Yes&quot;"/>
+            <declare name="total_gross_pay" type="Real" array="False" size=""/>
+            <declare name="employee_count" type="Real" array="False" size=""/>
+            <assign variable="total_gross_pay" expression="0"/>
+            <assign variable="employee_count" expression="0"/>
+            <while expression="continue_program == &quot;Yes&quot;">
+                <output expression="&quot;Enter employee last name&quot;" newline="True"/>
+                <input variable="lname"/>
+                <output expression="&quot;Enter hours worked&quot;" newline="True"/>
+                <input variable="Hworked"/>
+                <output expression="&quot;Enter hourly rate of pay&quot;" newline="True"/>
+                <input variable="rate_of_pay"/>
+                <if expression="Hworked &gt; 40">
+                    <then>
+                        <assign variable="Grosspay" expression="40 * rate_of_pay + (Hworked - 40) * rate_of_psy * 1.5"/>
+                    </then>
+                    <else>
+                        <assign variable="Grosspay" expression="Hworked * rate_of_pay"/>
+                    </else>
+                </if>
+                <output expression="lname" newline="True"/>
+                <output expression="gross_pay" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

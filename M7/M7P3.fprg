@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-03 10:34:51 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLURWUUExUEM7MjAyNS0wMy0wMzsxMDowMzo0MiBBTTszMzI1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLURWUUExUEM7MjAyNS0wMy0wMzsxMDozNDo1MSBBTTsxOzM0Mzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="continue_program" type="String" array="False" size=""/>
+            <declare name="last_name" type="String" array="False" size=""/>
+            <declare name="score1" type="Real" array="False" size=""/>
+            <declare name="score2" type="Real" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <declare name="student_count" type="Integer" array="False" size=""/>
+            <output expression="&quot;Do you want to continue? (Yes/No).&quot;" newline="True"/>
+            <assign variable="continue_program" expression="yes"/>
+            <assign variable="student_count" expression="0"/>
+            <while expression="continue_program == &quot;Yes&quot;">
+                <input variable="&quot;Enter last name&quot;"/>
+                <input variable="&quot;Enter exam score 1&quot;"/>
+                <input variable="&quot;Enter exam score 2&quot;"/>
+                <assign variable="average" expression="(score + score2)/2"/>
+                <output expression="last_name" newline="True"/>
+                <output expression="average" newline="True"/>
+                <assign variable="student_count" expression="student_count + 1"/>
+                <output expression="&quot;Do you want to continue? (Yes/No)&quot;" newline="True"/>
+                <output expression="&quot;Total students entered: &quot; + student_count" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
