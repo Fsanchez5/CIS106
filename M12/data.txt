@@ -1,0 +1,10 @@
+Sanchez 60
+Sosa 92
+Bernal 75
+Cisneros 85
+Rodriguez 90
+Chavez 70
+Garcia 55
+Perez 89
+Gomez 99
+Bonilla 91
