@@ -1,0 +1,10 @@
+Sanchez 0.361
+Sosa 0.486
+Bernal 0.561
+Cisneros 0.321
+Rodriguez 0.271
+Chavez 0.241
+Garcia 0.345
+Perez 0.444
+Gomez 0.867
+Bonilla 0.667
